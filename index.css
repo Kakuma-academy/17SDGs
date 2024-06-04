@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header h1{
+    color:rgb(228, 11, 192);
+    margin-top: -9px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.header{
+    margin-bottom:220px;
+    display: flex;
+    justify-content:space-between;
+
+}
+.header button{
+    padding: 8px 20px;
+    background-color: coral;
+    border: none;
+    outline: none;
+    align-self: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: black;
+   
+    overflow: hidden;
+}
+
+.image-container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style:preserve-3d;   /* Make it a 3d dimensioanal */
+     transform: perspective(1000px)  rotateY(0deg); /* Place items in diagonal mannner */
+     transition: 3s ease-in-out;
+
+}
+.image-container span{
+    margin-top: -60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px); /* The spherical shape postions */
+}
+.image-container span img{
+    position:absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.btn-container{
+    position: relative;
+    width: 80%;
+}
+
+.btn{
+    position: absolute;
+    bottom: -10px;
+    padding: 10px 22px;
+    background-color: white;
+    font-weight: bolder;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background .5s;
+}
+.btn:hover{
+    color:white;
+    background-color:rgb(121, 116, 116);
+    
+}
